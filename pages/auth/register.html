@@ -1,0 +1,61 @@
+<div class="auth-wrapper">
+    <div class="container-fluid h-100">
+        <div class="row flex-row h-100 bg-white">
+            <div class="col-xl-8 col-lg-6 col-md-5 p-0 d-md-block d-lg-block d-sm-none d-none">
+                <div class="lavalite-bg" style="background-image: url('img/auth/register-bg.jpg')">
+                    <div class="lavalite-overlay"></div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-7 my-auto p-0">
+                <div class="authentication-form mx-auto">
+                    <!-- <div class="logo-centered">
+                        <a href="index.html"><img src="src/img/brand.svg" alt=""></a>
+                    </div> -->
+                    <h3>New to WorkFlow?</h3>
+                    <p>Join us today! It takes only few steps</p>
+                    <form ng-submit="register()">
+                        <div class="form-group">
+                            <input type="email" id="email" class="form-control" placeholder="Email" ng-model="user.email" required="">
+                            <i class="ik ik-mail"></i>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="name" class="form-control" placeholder="Name" ng-model="user.name"  required="">
+                            <i class="ik ik-user"></i>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="surname" class="form-control" placeholder="Surname" ng-model="user.surname"  required="">
+                            <i class="ik ik-user"></i>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" id="password" class="form-control" placeholder="Create Password" ng-model="user.password"  required="">
+                            <i class="ik ik-lock"></i>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" id="password_retype" class="form-control" placeholder="Retype Password" ng-model="user.password_retype"  required="">
+                            <i class="ik ik-lock"></i>
+                            <span style="color: red; padding-right: 1rem; font-size: small;" ng-show="user.password != user.password_retype">Passwords don't match!</span>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-12 text-left">
+                                <label class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="item_checkbox" name="item_checkbox" value="option1">
+                                    <span class="custom-control-label">&nbsp;I Accept <a ui-sref="terms_and_conditions">Terms and Conditions</a></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="sign-btn text-center">
+                            <button type="submit" class="btn btn-theme" ng-disabled="user.password != user.password_retype">
+                                {{loader_label}}
+                            </button>
+                        </div>
+                    </form>
+                    <div class="register">
+                        <p>Already have an account? <a ui-sref="login">Sign In</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+      
